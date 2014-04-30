@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+  <item android:id="@+id/action_results"
+        android:title="Results"
+        android:showAsAction="ifRoom|withText"/>
+  <item android:id="@+id/action_status"
+        android:title="Status"
+        android:showAsAction="ifRoom|withText"/>
+  <item android:id="@+id/action_workunits"
+        android:title="Work Units"
+        android:showAsAction="ifRoom|withText"/>
+  <item android:id="@+id/action_start_stop"
+        android:title="Stop"
+        android:visible="false"
+        android:showAsAction="ifRoom|withText"/>
+  <item android:id="@+id/action_clear"
+        android:title="Clear"
+        android:showAsAction="ifRoom|withText"/>
+</menu>

@@ -1,0 +1,50 @@
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.clover.boinc.asteroids_at_home">
+
+  <uses-sdk
+      android:minSdkVersion="16"
+      android:targetSdkVersion="19"/>
+
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+  <application
+      android:allowBackup="true"
+      android:label="@string/app_name"
+      android:icon="@drawable/ic_launcher">
+
+    <meta-data
+        android:name="com.clover.boinc.project_url"
+        android:value="http://asteroidsathome.net/boinc/" />
+    <meta-data
+        android:name="com.clover.boinc.project_email"
+        android:value="jeff@clover.com" />
+    <meta-data
+        android:name="com.clover.boinc.project_password"
+        android:value="clover" />
+
+    <activity
+        android:name="com.clover.boinc.lib.SetupActivity"
+        android:exported="true"
+        android:icon="@drawable/ic_launcher">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
+
+        <category android:name="android.intent.category.LAUNCHER"/>
+      </intent-filter>
+    </activity>
+
+    <service android:name="com.clover.boinc.lib.BoincClientService"/>
+
+    <receiver
+        android:name="com.clover.boinc.lib.BootReceiver"
+        android:enabled="true"
+        android:exported="true">
+      <intent-filter>
+        <action android:name="android.intent.action.BOOT_COMPLETED" />
+      </intent-filter>
+    </receiver>
+  </application>
+
+</manifest>
