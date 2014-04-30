@@ -1,0 +1,1 @@
+include ':lib', ':asteroids-at-home', ':seti-at-home'
